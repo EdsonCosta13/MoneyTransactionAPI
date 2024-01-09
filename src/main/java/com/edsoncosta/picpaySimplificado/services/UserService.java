@@ -32,8 +32,7 @@ public class UserService {
 
     public User findUserById(Long id) throws Exception
     {
-        return this.userRepository.
-                findUserById(id).
+        return this.userRepository.findById(id).
                 orElseThrow(()->new Exception("User not found!"));
     }
 
